@@ -22,6 +22,11 @@
 		70AEB4162B1612B0005D64AD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AEB4152B1612B0005D64AD /* Coordinator.swift */; };
 		70AEB4252B1616F9005D64AD /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AEB4242B1616F9005D64AD /* HomeCoordinator.swift */; };
 		70AEB4272B161703005D64AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AEB4262B161703005D64AD /* HomeViewController.swift */; };
+		70E44CC72B18C469004129AD /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E44CC62B18C469004129AD /* UITableView.swift */; };
+		70E44CC92B18C4BB004129AD /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E44CC82B18C4BB004129AD /* UICollectionView.swift */; };
+		70E44CCB2B18C554004129AD /* ProfileViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E44CCA2B18C554004129AD /* ProfileViewController+CollectionView.swift */; };
+		70E44CCE2B18C5EE004129AD /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E44CCD2B18C5EE004129AD /* CardCollectionViewCell.swift */; };
+		70E44CD12B18C6C5004129AD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70E44CD02B18C6C5004129AD /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,10 @@
 		70AEB4152B1612B0005D64AD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		70AEB4242B1616F9005D64AD /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		70AEB4262B161703005D64AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		70E44CC62B18C469004129AD /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		70E44CC82B18C4BB004129AD /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		70E44CCA2B18C554004129AD /* ProfileViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		70E44CCD2B18C5EE004129AD /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E44CD12B18C6C5004129AD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +91,9 @@
 		7006161B2B178BDB00C0914F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				70E44CCC2B18C5DB004129AD /* Cell */,
 				7006161F2B178D5E00C0914F /* ProfileViewController.swift */,
+				70E44CCA2B18C554004129AD /* ProfileViewController+CollectionView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,6 +161,7 @@
 		70AEB4062B15EFBA005D64AD /* Core Layer */ = {
 			isa = PBXGroup;
 			children = (
+				70E44CC52B18C458004129AD /* Extenstion */,
 				70AEB3FC2B15EDF6005D64AD /* LaunchScreen.storyboard */,
 				70AEB3FA2B15EDF6005D64AD /* Assets.xcassets */,
 			);
@@ -334,6 +347,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		70E44CC52B18C458004129AD /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				70E44CC62B18C469004129AD /* UITableView.swift */,
+				70E44CC82B18C4BB004129AD /* UICollectionView.swift */,
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
+		70E44CCC2B18C5DB004129AD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				70E44CCD2B18C5EE004129AD /* CardCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,6 +380,9 @@
 			dependencies = (
 			);
 			name = GreenWay;
+			packageProductDependencies = (
+				70E44CD02B18C6C5004129AD /* SnapKit */,
+			);
 			productName = GreenWay;
 			productReference = 70AEB3EE2B15EDF5005D64AD /* GreenWay.app */;
 			productType = "com.apple.product-type.application";
@@ -378,6 +411,9 @@
 				Base,
 			);
 			mainGroup = 70AEB3E52B15EDF5005D64AD;
+			packageReferences = (
+				70E44CCF2B18C6C5004129AD /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 70AEB3EF2B15EDF5005D64AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,12 +440,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E44CC92B18C4BB004129AD /* UICollectionView.swift in Sources */,
 				70AEB4132B161292005D64AD /* BaseCoordinator.swift in Sources */,
 				7006161A2B17834F00C0914F /* HomeViewModel.swift in Sources */,
 				700616272B178E7100C0914F /* AppCoordinator.swift in Sources */,
 				700616202B178D5F00C0914F /* ProfileViewController.swift in Sources */,
 				70AEB3F62B15EDF5005D64AD /* ViewController.swift in Sources */,
 				700616242B178DA700C0914F /* ProfileCoordinator.swift in Sources */,
+				70E44CCB2B18C554004129AD /* ProfileViewController+CollectionView.swift in Sources */,
+				70E44CCE2B18C5EE004129AD /* CardCollectionViewCell.swift in Sources */,
 				70AEB4162B1612B0005D64AD /* Coordinator.swift in Sources */,
 				70AEB4272B161703005D64AD /* HomeViewController.swift in Sources */,
 				70AEB3F22B15EDF5005D64AD /* AppDelegate.swift in Sources */,
@@ -417,6 +456,7 @@
 				70AEB4102B161247005D64AD /* TabbarCoordinator.swift in Sources */,
 				70AEB4252B1616F9005D64AD /* HomeCoordinator.swift in Sources */,
 				70AEB40E2B161229005D64AD /* TabbarViewController.swift in Sources */,
+				70E44CC72B18C469004129AD /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +664,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		70E44CCF2B18C6C5004129AD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		70E44CD02B18C6C5004129AD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70E44CCF2B18C6C5004129AD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 70AEB3E62B15EDF5005D64AD /* Project object */;
 }
